@@ -6,5 +6,8 @@ export default {
   },
   getAll() {
     return fetch(`${remoteURL}/employees`).then(result => result.json())
+  },
+  getAllWithAnimals(){
+    return fetch(`${remoteURL}/employees?_embed=animals`).then(result => result.json())
   }
 }

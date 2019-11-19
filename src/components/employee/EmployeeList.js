@@ -8,7 +8,7 @@ import React, { Component } from 'react'
     
     componentDidMount(){
       console.log("EMPLOYEE LIST: ComponentDidMount");
-      EmployeeManager.getAll()
+      EmployeeManager.getAllWithAnimals()
         .then((employeesArr) => {
             this.setState({
                 employees: employeesArr

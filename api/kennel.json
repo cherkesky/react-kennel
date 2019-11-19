@@ -1,9 +1,9 @@
 {
   "animals": [
-      { "id": 1, "name": "Doodles", "breed": "Poodle", "employeeId": "3"},
-      { "id": 2, "name": "Decker", "breed": "German Sheperd", "employeeId": "4"},
-      { "id": 3, "name": "Esme", "breed": "Pitbull", "employeeId": "2" },
-      { "id": 4, "name": "Laika", "breed": "Beagle", "employeeId": "1" }
+      { "id": 1, "name": "Doodles", "breed": "Poodle", "employeeId": 3},
+      { "id": 2, "name": "Decker", "breed": "German Sheperd", "employeeId": 4},
+      { "id": 3, "name": "Esme", "breed": "Pitbull", "employeeId": 2 },
+      { "id": 4, "name": "Laika", "breed": "Beagle", "employeeId": 1 }
 
   ],
   "employees": [
@@ -18,7 +18,7 @@
     { "id": 3, "name": "Brentwood"}
   ],
   "owners": [
-    { "id": 1, "name": "Guy Cherkesky", "phoneNumber": "615-669-2299", "animalId": "4"},
-    { "id": 2, "name": "Caty Chapman", "phoneNumber": "615-870-7537", "animalId": "4"}
+    { "id": 1, "name": "Guy Cherkesky", "phoneNumber": "615-669-2299", "animalId": 4},
+    { "id": 2, "name": "Caty Chapman", "phoneNumber": "615-870-7537", "animalId": 4}
   ]
 }
