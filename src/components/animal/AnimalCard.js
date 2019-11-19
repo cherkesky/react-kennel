@@ -1,28 +1,18 @@
 import React, { Component } from 'react';
+import '../animal/Animal.css';
 
 class AnimalCard extends Component {
   render() {
     return (
-      <div>
       <div className="card">
-        <div className="card-content">
-          <picture>
-            <img src={require('./dog.svg')} alt="My Dog" />
-          </picture>
-          <h3>Name: <span className="card-petname">Laika</span></h3>
-          <p>Breed: Beagle & Aussie Shepard</p>
-        </div>
+          <div className="card-content">
+            <picture>
+              <img src={require('./dog.svg')} alt="My Dog" />
+            </picture>
+            <h2>Name: <span className="card-petname">{this.props.animal.name}</span></h2>
+            <p>Breed: {this.props.animal.breed}</p>
+          </div>
       </div>
-      <div className="card">
-      <div className="card-content">
-        <picture>
-          <img src={require('./dog.svg')} alt="My Dog" />
-        </picture>
-        <h3>Name: <span className="card-petname">Belka</span></h3>
-        <p>Breed: Beagle & Aussie Shepard</p>
-      </div>
-    </div>
-    </div>
     );
   }
 }
