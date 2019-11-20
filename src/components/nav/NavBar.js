@@ -18,6 +18,7 @@ class NavBar extends Component {
             <li><Link className="nav-link" to="/location">Locations</Link></li>
             <li><Link className="nav-link" to="/employee">Employees</Link></li>
             <li><Link className="nav-link" to="/owner">Owners</Link></li>
+            <li><Link className="nav-link" to="/form">Form</Link></li>
           </ul>
         </nav>
       </header>

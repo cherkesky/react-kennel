@@ -22,14 +22,30 @@ import React, { Component } from 'react'
 
     render(){
       console.log("AnimalList: Render");
-      console.log("state", this.state.animals)
+    
       return(
         <div className="container-cards">
           {this.state.animals.map(animal =>
-            <AnimalCard key={animal.id} animal={animal} />
+            <AnimalCard
+              key={animal.id}
+              animal={animal}
+              deleteAnimal={this.deleteAnimal}
+            />
           )}
         </div>
       )
+    }
+
+    deleteAnimal = id => {
+      AnimalManager.delete(id)
+      .then(() => {
+        AnimalManager.getAll()
+        .then((newAnimals) => {
+          this.setState({
+              animals: newAnimals
+          })
+        })
+      })
     }
 }
 

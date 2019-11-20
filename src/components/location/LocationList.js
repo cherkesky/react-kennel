@@ -26,10 +26,26 @@ import React, { Component } from 'react'
       return(
         <div className="container-cards">
           {this.state.locations.map(location =>
-            <LocationCard key={location.id} location={location} />
+            <LocationCard 
+            key={location.id} 
+            location={location} 
+            deleteLocation={this.deleteLocation}
+            />
           )}
         </div>
       )
+    }
+
+    deleteLocation = id => {
+      LocationManager.delete(id)
+      .then(() => {
+        LocationManager.getAll()
+        .then((newLocation) => {
+          this.setState({
+              locations: newLocation
+          })
+        })
+      })
     }
 }
 
