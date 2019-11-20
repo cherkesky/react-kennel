@@ -2,7 +2,7 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
+      "name": "Doodle",
       "breed": "Poodle",
       "employeeId": 3
     },
@@ -28,11 +28,11 @@
   "employees": [
     {
       "id": 1,
-      "name": "Jack Sparrow"
+      "name": "Jacob Sparrow"
     },
     {
       "id": 2,
-      "name": "Ben Johns"
+      "name": "Benjamin Johns"
     },
     {
       "id": 3,
@@ -54,11 +54,11 @@
     },
     {
       "id": 3,
-      "name": "Brentwood"
+      "name": "Brentwood, TN"
     },
     {
       "id": 4,
-      "name": "Brentwood"
+      "name": "Brentwood, KY"
     }
   ],
   "owners": [
@@ -66,19 +66,23 @@
       "id": 1,
       "name": "Guy Cherkesky",
       "phoneNumber": "615-669-2299",
-      "animalId": 4
+      "animalId": 4,
+      "profilePic": "https://www.svgrepo.com/show/5557/man-with-tie-profile.svg"
     },
     {
       "id": 2,
       "name": "Caty Chapman",
       "phoneNumber": "615-870-7537",
-      "animalId": 4
+      "animalId": 4,
+      "profilePic": "https://www.svgrepo.com/show/5557/man-with-tie-profile.svg"
+      
     },
     {
       "id": 3,
       "name": "Caty Chapman",
       "phoneNumber": "615-870-7537",
-      "animalId": 4
+      "animalId": 4,
+      "profilePic": "https://www.svgrepo.com/show/5557/man-with-tie-profile.svg"
     }
   ]
 }

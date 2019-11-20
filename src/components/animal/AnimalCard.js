@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 class AnimalCard extends Component {
   render() {
+    console.log("PROPS", this.props)
     return (
       <div className="card">
         <div className="card-content">
