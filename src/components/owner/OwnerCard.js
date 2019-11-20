@@ -5,6 +5,7 @@ class OwnerCard extends Component {
     return (
       <div className="card">
           <div className="card-content">
+          <img src={this.props.owner.profilePic} alt="profile"/>
             <h2 className="card-location">{this.props.owner.name}</h2>
             <p className="card-location">{this.props.owner.phoneNumber}</p>
             <p className="card-location"> Pet Name: {this.props.owner.animal["name"]}</p>
