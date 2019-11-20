@@ -8,6 +8,7 @@ import OwnerCard from './owner/OwnerList'
 import AnimalList from './animal/AnimalList'
 import LocationList from './location/LocationList'
 import EmployeeList from './employee/EmployeeList'
+import AnimalForm from './animal/AnimalForm'
 
 
 
@@ -32,6 +33,9 @@ class ApplicationViews extends Component {
         }} />
          <Route path="/owner" render={(props) => {
           return <OwnerCard />
+        }} />
+         <Route path="/form" render={(props) => {
+          return <AnimalForm />
         }} />
       </React.Fragment>
     )

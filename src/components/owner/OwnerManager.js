@@ -9,6 +9,12 @@ export default {
   },
   getAllWithAnimals(){
    return fetch(`${remoteURL}/owners?_expand=animal`).then(result => result.json())
+  },
+  delete(id) {
+    return fetch(`http://localhost:5002/owners/${id}`, {
+        method: "DELETE"
+    })
+    .then(result => result.json())
   }
 }
 

@@ -8,7 +8,7 @@ import React, { Component } from 'react'
     
     componentDidMount(){
       console.log("EMPLOYEE LIST: ComponentDidMount");
-      EmployeeManager.getAll()
+      EmployeeManager.getAllWithAnimals()
         .then((employeesArr) => {
             this.setState({
                 employees: employeesArr
@@ -23,10 +23,25 @@ import React, { Component } from 'react'
       return(
         <div className="container-cards">
           {this.state.employees.map(employee =>
-            <EmployeeCard key={employee.id} employee={employee} />
+            <EmployeeCard 
+            key={employee.id} 
+            employee={employee} 
+            deleteEmployee={this.deleteEmployee}
+            />
           )}
         </div>
       )
+    }
+    deleteEmployee = id => {
+      EmployeeManager.delete(id)
+      .then(() => {
+        EmployeeManager.getAllWithAnimals()
+        .then((newEmployee) => {
+          this.setState({
+              employees: newEmployee
+          })
+        })
+      })
     }
   }
 export default EmployeeList
