@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
     //import the components we will need
     import AnimalCard from './AnimalCard'
-    import AnimalManager from '../../modules/AnimalManager'
+    import AnimalManager from './AnimalManager'
 
     class AnimalList extends Component {
         //define what this component needs to render

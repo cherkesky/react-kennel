@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import AnimalManager from '../../modules/AnimalManager';
+import AnimalManager from './AnimalManager';
 import './AnimalDetail.css'
 
 class AnimalDetail extends Component {
@@ -7,6 +7,7 @@ class AnimalDetail extends Component {
   state = {
       name: "",
       breed: "",
+      loadingStatus: true,
   }
 
   componentDidMount(){
@@ -16,7 +17,8 @@ class AnimalDetail extends Component {
     .then((animal) => {
       this.setState({
         name: animal.name,
-        breed: animal.breed
+        breed: animal.breed,
+        loadingStatus: false
       });
     });
   }
@@ -30,10 +32,19 @@ class AnimalDetail extends Component {
           </picture>
             <h3>Name: <span style={{ color: 'darkslategrey' }}>{this.state.name}</span></h3>
             <p>Breed: {this.state.breed}</p>
+            <button type="button" disabled={this.state.loadingStatus} onClick={this.handleDelete}>Discharge</button>
+
         </div>
       </div>
     );
   }
+
+  handleDelete = () => {
+    //invoke the delete function in AnimalManger and re-direct to the animal list.
+    this.setState({loadingStatus: true})
+    AnimalManager.delete(this.props.animalId)
+    .then(() => this.props.history.push("/animals"))
+}
 }
 
 export default AnimalDetail;
