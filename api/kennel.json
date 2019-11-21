@@ -23,6 +23,21 @@
       "name": "Laika-1",
       "breed": "Beagle",
       "employeeId": 4
+    },
+    {
+      "name": "Booboo ",
+      "breed": "Parrot",
+      "id": 6
+    },
+    {
+      "name": "Moses",
+      "breed": "Camel",
+      "id": 7
+    },
+    {
+      "name": "Jopsy",
+      "breed": "Ant",
+      "id": 8
     }
   ],
   "employees": [
@@ -75,7 +90,6 @@
       "phoneNumber": "615-870-7537",
       "animalId": 4,
       "profilePic": "https://www.svgrepo.com/show/5557/man-with-tie-profile.svg"
-      
     },
     {
       "id": 3,

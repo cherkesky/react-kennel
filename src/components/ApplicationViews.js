@@ -27,12 +27,14 @@ class ApplicationViews extends Component {
         <Route exact path="/animals" render={(props) => {
           return <AnimalList {...props} />
         }} />
+
         <Route path="/animals/:animalId(\d+)" render={(props) => {
           // Pass the animalId to the AnimalDetailComponent \d+ is looking for digits
           console.log("REACT PROPS", props)
           // console.log("THIS PROPS",this.props)
           return <AnimalDetail animalId={parseInt(props.match.params.animalId)} {...props} />
         }} />
+        
         <Route path="/animals/new" render={(props) => {
           return <AnimalForm {...props} />
         }} />
