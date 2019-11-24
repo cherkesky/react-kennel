@@ -19,7 +19,8 @@ import React, { Component } from 'react'
     render(){
       console.log("EmployeeList: Render");
       console.log("state", this.state.employees)
-
+      console.log("EMPLOYEE LIST PROPS", this.props.match)
+      
       return(
         <div className="container-cards">
           {this.state.employees.map(employee =>
@@ -27,6 +28,7 @@ import React, { Component } from 'react'
             key={employee.id} 
             employee={employee} 
             deleteEmployee={this.deleteEmployee}
+            {...this.props}
             />
           )}
         </div>

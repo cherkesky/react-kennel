@@ -22,9 +22,9 @@ import React, { Component } from 'react'
 
     render(){
       console.log("AnimalList: Render");
-    
       return(
         <>
+        {/**********                           Admin Button                            ********/}
         <section className="section-content">
         <button type="button"
             className="btn"
@@ -32,13 +32,14 @@ import React, { Component } from 'react'
             Admit Animal
         </button>
       </section>
-
+        {/**********                       Setting the state                            ********/}
         <div className="container-cards">
           {this.state.animals.map(animal =>
             <AnimalCard
               key={animal.id}
               animal={animal}
               deleteAnimal={this.deleteAnimal}
+              {...this.props} //passing props to the Edit button
             />
           )}
         </div>

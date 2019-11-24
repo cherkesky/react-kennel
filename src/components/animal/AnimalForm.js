@@ -14,7 +14,7 @@ class AnimalForm extends Component {
         this.setState(stateToChange);
     };
 
-    /*  Local method for validation, set loadingStatus, create animal      object, invoke the AnimalManager post method, and redirect to the full animal list
+    /*  Local method for validation, set loadingStatus, create animal object, invoke the AnimalManager post method, and redirect to the full animal list
     */
     constructNewAnimal = evt => {
         evt.preventDefault();
@@ -48,7 +48,8 @@ class AnimalForm extends Component {
                         placeholder="Animal name"
                         />
                         <label htmlFor="animalName">Name</label>
-                        
+
+
                         <input
                         type="text"
                         required
@@ -59,6 +60,8 @@ class AnimalForm extends Component {
                         <label htmlFor="breed">Breed</label>
                     </div>
                     <div className="alignRight">
+                        
+                        
                         <button
                         type="button"
                         disabled={this.state.loadingStatus}
