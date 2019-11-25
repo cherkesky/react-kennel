@@ -27,6 +27,7 @@ class AnimalCard extends Component {
   }
 }
 
+
 export default AnimalCard;
 
 
