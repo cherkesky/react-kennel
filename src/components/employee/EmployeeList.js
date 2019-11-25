@@ -4,7 +4,9 @@ import React, { Component } from 'react'
     import EmployeeManager from "./EmployeeManager"
 
     class EmployeeList extends Component {
-      state = {employees:[]}
+      state = {
+        employees:[]
+      }
     
     componentDidMount(){
       console.log("EMPLOYEE LIST: ComponentDidMount");
@@ -19,6 +21,7 @@ import React, { Component } from 'react'
     render(){
       console.log("EmployeeList: Render");
       console.log("state", this.state.employees)
+      console.log("EMPLOYEE LIST PROPS", this.props.match)
 
       return(
         <div className="container-cards">
@@ -27,10 +30,12 @@ import React, { Component } from 'react'
             key={employee.id} 
             employee={employee} 
             deleteEmployee={this.deleteEmployee}
+            {...this.props}
             />
           )}
         </div>
       )
+      
     }
     deleteEmployee = id => {
       EmployeeManager.delete(id)

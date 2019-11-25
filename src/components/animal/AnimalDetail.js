@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import AnimalManager from './AnimalManager';
 import './AnimalDetail.css'
 
-class AnimalDetail extends Component {
+class AnimalDetail extends Component { 
 
   state = {
       name: "",
