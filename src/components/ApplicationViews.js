@@ -22,8 +22,6 @@ import Login from './auth/Login'
 
 class ApplicationViews extends Component {
 
-  isAuthenticated = () => localStorage.getItem("credentials") !== null
-
   render() {
     return (
       <React.Fragment>
@@ -36,7 +34,7 @@ class ApplicationViews extends Component {
         {/**********                           Animal Routing                            ********/}
         {/***************************************************************************************/}
         <Route exact path="/animals" render={props => {
-          if (this.isAuthenticated()) {
+          if (this.props.user) {
             return <AnimalList {...props} />
           } else {
             return <Redirect to="/login" />
@@ -92,8 +90,10 @@ class ApplicationViews extends Component {
         {/***************************************************************************************/}
         {/**********                           Login Routing                             ********/}
         {/***************************************************************************************/}
-        <Route path="/login" component={Login} />
-
+        <Route path="/login" render={(props) => {
+          console.log("USER - ApplicationView", this.props.user)
+          return <Login setUser={this.props.setUser} {...props}/>
+        }} />
 
       </React.Fragment>
     )
